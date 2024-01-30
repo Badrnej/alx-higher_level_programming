@@ -2,6 +2,8 @@
 """Module 6-rectangle
 Defines a Rectangle class.
 """
+
+
 class Rectangle:
     """Rectangle class defined by width and height.
     Attributes:

@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """Module 8-rectangle
-Defines a Rectangle class.
+Defines a Rectangle class
 """
+
+
 class Rectangle:
-    """Rectangle class defined by width and height
+    """Rectangle class defined by width and height.
     Attributes:
         number_of_instances: number of Rectangle instances,
         increments with every instantitation,
