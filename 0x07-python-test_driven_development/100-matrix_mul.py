@@ -13,7 +13,7 @@ def matrix_mul(m_a, m_b):
         TypeError: If either m_a or m_b has different-sized rows.
         ValueError: If m_a and m_b cannot be multiplied.
     Returns:
-        A matrix representing the multiplication of m_a by m_b.
+        A new matrix representing the multiplication of m_a by m_b
     """
 
     if m_a == [] or m_a == [[]]:
