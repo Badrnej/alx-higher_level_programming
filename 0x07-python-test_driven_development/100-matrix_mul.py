@@ -3,7 +3,7 @@
 
 
 def matrix_mul(m_a, m_b):
-    """Multiply two matrices
+    """Multiply two matrices.
     Args:
         m_a (list of lists of ints/floats): The first matrix.
         m_b (list of lists of ints/floats): The second matrix.
@@ -13,7 +13,7 @@ def matrix_mul(m_a, m_b):
         TypeError: If either m_a or m_b has different-sized rows.
         ValueError: If m_a and m_b cannot be multiplied.
     Returns:
-        A new matrix representing the multiplication of m_a by m_b.
+        A matrix representing the multiplication of m_a by m_b.
     """
 
     if m_a == [] or m_a == [[]]:
@@ -32,10 +32,10 @@ def matrix_mul(m_a, m_b):
         raise TypeError("m_b must be a list of lists")
 
     if not all((isinstance(ele, int) or isinstance(ele, float))
-            for ele in [num for row in m_a for num in row]):
+               for ele in [num for row in m_a for num in row]):
         raise TypeError("m_a should contain only integers or floats")
     if not all((isinstance(ele, int) or isinstance(ele, float))
-            for ele in [num for row in m_b for num in row]):
+               for ele in [num for row in m_b for num in row]):
         raise TypeError("m_b should contain only integers or floats")
 
     if not all(len(row) == len(m_a[0]) for row in m_a):
