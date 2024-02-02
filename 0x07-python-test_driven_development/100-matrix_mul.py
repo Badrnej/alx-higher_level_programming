@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""implementation of matrix multiplication"""
+"""implementation  matrix multiplication"""
 
 
 def matrix_mul(m_a, m_b):
@@ -7,15 +7,15 @@ def matrix_mul(m_a, m_b):
     Multiplies two matrices.
 
     Args:
-        m_a (list): First matrix.
-        m_b (list): Second matrix.
+        m_a (list): First matrix
+        m_b (list): Second matrix
 
     Returns:
-        list: Result of matrix multiplication.
+        list: Result matrix multiplication
 
     Raises:
-        TypeError: If input matrices are not valid.
-        ValueError: If matrices can't be multiplied.
+        TypeError: If input matrices are not valid
+        ValueError: If matrices can't be multiplied
     """
 
     # Check if m_a and m_b are lists
