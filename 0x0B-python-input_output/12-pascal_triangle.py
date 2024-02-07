@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Defines a Pascal's Triangle function"""
+"""Defines a Pascal's Triangle function."""
 
 
 def pascal_triangle(n):
@@ -11,14 +11,11 @@ def pascal_triangle(n):
         return []
 
     triangles = [[1]]
-    for _ in range(1, n):
-        tria = triangles[-1]
-        holder = [1]
-
-        for i in range(len(tria) - 1):
-            holder.append(tria[i] + tria[i + 1])
-
-        holder.append(1)
-        triangles.append(holder)
-
+    while len(triangles) != n:
+        tri = triangles[-1]
+        tmp = [1]
+        for i in range(len(tri) - 1):
+            tmp.append(tri[i] + tri[i + 1])
+        tmp.append(1)
+        triangles.append(tmp)
     return triangles

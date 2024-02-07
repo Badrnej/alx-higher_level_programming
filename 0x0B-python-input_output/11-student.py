@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Creates a class Student."""
+"""Defines a class Student."""
 
 
 class Student:
-    """Initialzes a student."""
+    """Represent a student."""
 
     def __init__(self, first_name, last_name, age):
         """Initialize a new Student.
@@ -18,7 +18,7 @@ class Student:
         self.age = age
 
     def to_json(self, attrs=None):
-        """Return a dictionary representation of the Student.
+        """Get a dictionary representation of the Student.
 
         If attrs is a list of strings, represents only those attributes
         included in the list.
@@ -26,13 +26,13 @@ class Student:
         Args:
             attrs (list): (Optional) The attributes to represent.
         """
-        def get_attributes(self, attrs):
-            if isinstance(attrs, list) and all(isinstance(ele, str) for ele in attrs):
-                return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
-            return self.__dict__
+        if (type(attrs) == list and
+                all(type(ele) == str for ele in attrs)):
+            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+        return self.__dict__
 
     def reload_from_json(self, json):
-        """Change all attributes of the Student.
+        """Replace all attributes of the Student.
 
         Args:
             json (dict): The key/value pairs to replace attributes with.
