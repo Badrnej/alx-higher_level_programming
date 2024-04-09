@@ -1,11 +1,11 @@
 #!/usr/bin/node
-const size = Math.floor(Number(process.argv[2]));
-if (isNaN(size)) {
+const times = process.argv;
+const cardfight = parseInt(times[2]);
+
+if (isNaN(cardfight)) {
   console.log('Missing size');
 } else {
-  for (let r = 0; r < size; r++) {
-    let row = '';
-    for (let c = 0; c < size; c++) row += 'X';
-    console.log(row);
+  for (let i = 0; i < times[2]; i++) {
+    console.log('X'.repeat(times[2]));
   }
 }
