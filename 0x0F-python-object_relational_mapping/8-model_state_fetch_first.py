@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-""" Print the first State object from the 'hbtn_0e_6_usa' database """
-
+""" prints the first State object from the database hbtn_0e_6_usa
+"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
